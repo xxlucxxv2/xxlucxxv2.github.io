@@ -19,7 +19,7 @@ html {
     align-items: center;
     justify-content: center;
     height: 100svh;
-    background-color: var(--background-color);
+    background-color: rgb(30, 30, 46);
     background-image: url("../bgs/topography.svg");
     overflow-x: clip;
 }
@@ -30,7 +30,7 @@ html.loaded {
 
 body {
     display: flex;
-    color: var(--text-color);
+    color: rgb(205, 214, 244);
     font-family: SpaceMono Nerd Font, monospace;
     justify-content: center;
     align-items: center;
@@ -78,7 +78,7 @@ body {
 }
 
 #greeting {
-    color: var(--accent-color-2);
+    color: rgb(180, 190, 254);
     font-size: 2.5em;
     font-weight: 900;
     grid-column: 1/-1;
@@ -89,7 +89,7 @@ body {
 #date {
     font-size: 1.3em;
     font-weight: 600;
-    color: var(--accent-color);
+    color: rgb(180, 190, 254);
     display: grid;
     grid-column: 1/-1;
     text-align: center;
@@ -97,7 +97,7 @@ body {
 }
 
 .header {
-    color: var(--accent-color);
+    color: rgb(180, 190, 254);
     font-size: 1.6em;
     font-weight: 600;
 }
@@ -115,13 +115,13 @@ ul {
 }
 
 a {
-    color: var(--text-color);
+    color: rgb(205, 214, 244);
     font-size: 1.2em;
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--hover-color);
+    color: rgb(127, 132, 156);
     font-style: italic;
 }
 
