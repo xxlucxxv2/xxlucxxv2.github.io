@@ -1,259 +1,259 @@
 :root {
-  --base: #1e1e2e;
-  --mantle: #181825;
-  --surface0: #313244;
-  --surface1: #45475a;
-  --text: #cdd6f4;
-  --subtext: #a6adc8;
-  --accent: #89b4fa;
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --surface0: #313244;
+    --surface1: #45475a;
+    --text: #cdd6f4;
+    --subtext: #a6adc8;
+    --accent: #89b4fa;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: var(--base);
-  color: var(--text);
-  font-family: "Segoe UI", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+    background-color: var(--base);
+    color: var(--text);
+    font-family: "Segoe UI", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
 }
 
 h1 {
-  color: var(--accent);
-  margin-bottom: 2rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .card {
-  background-color: var(--surface0);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: var(--surface0);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .card a {
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .card p {
-  color: var(--subtext);
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
+    color: var(--subtext);
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
 }
 
 .search-bar {
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .search-bar input[type="text"] {
-  background-color: var(--surface0);
-  color: var(--text);
-  border: 2px solid var(--surface1);
-  border-radius: 0.5rem;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  width: 300px;
+    background-color: var(--surface0);
+    color: var(--text);
+    border: 2px solid var(--surface1);
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    width: 300px;
 }
 
 .search-bar button {
-  background-color: var(--accent);
-  color: var(--base);
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+    background-color: var(--accent);
+    color: var(--base);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .search-bar button:hover {
-  background-color: #74c7ec;
+    background-color: #74c7ec;
 }
 
 .link-list {
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-  margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .link-list li {
-  background-color: var(--surface0);
-  border-radius: 0.75rem;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--surface0);
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .link-list li a {
-  color: var(--accent);
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-decoration: none;
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .link-list li a:hover {
-  color: #cdd6f4;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-decoration: none;
+    color: #cdd6f4;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .link-list li p {
-  color: var(--subtext);
-  font-size: 0.95rem;
-  margin-top: 0.25rem;
+    color: var(--subtext);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
 }
 
 .top-nav {
-  margin: 1rem auto;
-  text-align: center;
+    margin: 1rem auto;
+    text-align: center;
 }
 
 .back-link {
-  background-color: var(--surface1);
-  color: var(--accent);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
+    background-color: var(--surface1);
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
 }
 
 .collapsible-btn {
-  background-color: var(--surface1);
-  color: var(--accent);
-  padding: 1rem;
-  width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-  transition: background-color 0.3s;
+    background-color: var(--surface1);
+    color: var(--accent);
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
 }
 
 .collapsible-btn:hover {
-  color: #cdd6f4;
+    color: #cdd6f4;
 }
 
 .collapsible-content {
-  padding: 0 1rem;
-  max-height: 0;
-  overflow: hidden;
-  background-color: var(--surface0);
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-  transition: max-height 0.3s ease, padding 0.3s ease; /* Add padding transition */
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--surface0);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Add padding transition */
 }
 
 .collapsible-content.open {
-  max-height: 1000px; /* Set a high value to accommodate content height */
-  padding: 1rem; /* Consistent padding when open */
+    max-height: 1000px; /* Set a high value to accommodate content height */
+    padding: 1rem; /* Consistent padding when open */
 }
 
 .collapsible-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0; /* Remove default margins */
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margins */
 }
 
 .collapsible-content li {
-  background-color: var(--surface1);
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
+    background-color: var(--surface1);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .collapsible-content li a {
-  color: var(--accent);
-  font-size: 1.1rem;
-  text-decoration: none;
+    color: var(--accent);
+    font-size: 1.1rem;
+    text-decoration: none;
 }
 
 .collapsible-content li p {
-  color: var(--subtext);
-  font-size: 0.95rem;
-  margin-top: 0.25rem;
+    color: var(--subtext);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
 }
 
 .collapsible-content li a {
-  color: var(--accent); /* Default link color */
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: color 0.3s ease; /* Smooth transition for color change */
+    color: var(--accent); /* Default link color */
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 .collapsible-content li a:hover {
-  color: #cdd6f4; /* Hover color */
+    color: #cdd6f4; /* Hover color */
 }
 
 /* Global link styles */
 a {
-  color: var(--accent); /* Default link color */
-  text-decoration: none;
-  transition: color 0.3s ease; /* Smooth transition for color change */
+    color: var(--accent); /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 /* Hover effect for all links */
 a:hover {
-  color: #cdd6f4; /* Hover color */
+    color: #cdd6f4; /* Hover color */
 }
 
 /* Specifically for links within the collapsible content */
 .collapsible-content a {
-  color: var(--accent); /* Default color for links in collapsible content */
+    color: var(--accent); /* Default color for links in collapsible content */
 }
 
 .collapsible-content a:hover {
-  color: #cdd6f4; /* Hover color for links in collapsible content */
+    color: #cdd6f4; /* Hover color for links in collapsible content */
 }
 
 .spotify-icon {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  z-index: 1000;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
 .spotify-icon:hover {
-  opacity: 1;
-  transform: scale(1.1);
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .spotify-icon img {
-  width: 100%;
-  height: 100%;
-  filter: brightness(0) invert(1); /* Catppuccin Mocha-style tint */
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1); /* Catppuccin Mocha-style tint */
 }
