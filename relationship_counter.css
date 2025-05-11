@@ -1,0 +1,60 @@
+/* Catppuccin Mocha Theme */
+:root {
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --text: #cdd6f4;
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --blue: #89b4fa;
+  --sky: #89dceb;
+  --lavender: #b4befe;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--base);
+  color: var(--text);
+  text-align: center;
+}
+
+.heart {
+  font-size: 3rem;
+  color: var(--pink);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--lavender);
+  margin-bottom: 0.5em;
+}
+
+.info {
+  background-color: var(--surface0);
+  padding: 1.5em 2em;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  color: var(--text);
+  max-width: 90%;
+}
+
+strong {
+  color: var(--peach);
+}
