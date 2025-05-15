@@ -8,6 +8,13 @@
 
 :root {
   color-scheme: dark;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --text: #cdd6f4;
+  --subtext: #a6adc8;
+  --accent: #89b4fa;
 }
 
 html {
