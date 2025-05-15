@@ -133,6 +133,7 @@ a:hover {
 
 .search-bar {
     margin-bottom: 2rem;
+    font-family: SpaceMono Nerd Font, monospace;
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -154,6 +155,7 @@ a:hover {
     border: none;
     border-radius: 0.5rem;
     padding: 0.6rem 1rem;
+    font-family: SpaceMono Nerd Font, monospace;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;

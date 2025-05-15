@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "SpaceMono Nerd Font";
+  font-display: swap;
+  src: local("SpaceMono Nerd Font"),
+    url(../fonts/SpaceMonoNF.woff2) format("woff2"),
+    url(../fonts/SpaceMonoNF.woff) format("woff");
+}
+
 :root {
     --base: #1e1e2e;
     --mantle: #181825;
@@ -17,7 +25,7 @@
 body {
     background-color: var(--base);
     color: var(--text);
-    font-family: "Segoe UI", sans-serif;
+    font-family: SpaceMono Nerd Font, monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
