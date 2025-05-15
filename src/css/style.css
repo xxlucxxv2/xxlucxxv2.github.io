@@ -143,6 +143,7 @@ a:hover {
     background-color: var(--surface0);
     color: var(--text);
     border: 2px solid var(--surface1);
+    font-family: SpaceMono Nerd Font, monospace;
     border-radius: 0.5rem;
     padding: 0.6rem 1rem;
     font-size: 1rem;
