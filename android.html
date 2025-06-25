@@ -27,22 +27,5 @@
                 <p>Custom Android ROM</p>
             </li>
         </ul>
-
-        <script>
-            const collapsibleBtns =
-                document.querySelectorAll(".collapsible-btn");
-            collapsibleBtns.forEach((button) => {
-                button.addEventListener("click", function () {
-                    const content = this.nextElementSibling;
-
-                    // Toggle the 'open' class to trigger the height transition
-                    if (content.classList.contains("open")) {
-                        content.classList.remove("open");
-                    } else {
-                        content.classList.add("open");
-                    }
-                });
-            });
-        </script>
     </body>
 </html>
