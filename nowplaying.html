@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Now Playing</title>
+  <style>
+    :root {
+      /* Catppuccin Mocha Colors */
+      --base: #1e1e2e;
+      --surface: #313244;
+      --text: #cdd6f4;
+      --subtext: #a6adc8;
+      --accent: #b4befe;
+      --green: #a6e3a1;
+      --radius: 18px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--base);
+      color: var(--text);
+      font-family: "Segoe UI", Roboto, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      padding: 24px;
+      max-width: 360px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    #album-art {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    #album-art:hover {
+      transform: scale(1.02);
+    }
+
+    #track-name {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 10px 0 4px;
+    }
+
+    #artist-name {
+      font-size: 16px;
+      color: var(--subtext);
+      margin-bottom: 16px;
+    }
+
+    .progress-bar {
+      height: 6px;
+      width: 100%;
+      background: #444459;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background: var(--green);
+      width: 0%;
+      transition: width 0.3s linear;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img id="album-art" src="" alt="Album Art" />
+    <div id="track-name">Loading...</div>
+    <div id="artist-name"></div>
+    <div class="progress-bar">
+      <div class="progress" id="progress-bar"></div>
+    </div>
+  </div>
+
+  <script>
+    const accessToken = 'BQAT4x15gQ6ql4LEkXV5FdZIGSJCxuQraIH_VrN9H1CGC8Sg_3pgiv_5n6A8D70mfFSE2J1wSVvUA0d0RrnmfTFPtV_4e8OoeMT9eOxWXI3xz6k-ta52S8O7bbwjfajYTIJVy34sHpEVt2SjcUW5X7KOVIXuzfa0142lRwprZXSJQ5WuM0gJGuEEBFeLB3H3IxjJuxRDiE7nrK8DuqwKRoKruteiPke6_YW8RNcG9iYPVj2bIUSb_qcd57fbw6tSYoDwG9TFSuIL4QTIgoTxmPt2VqWOUL1fBO_fvmmjgbcFCnPbqgmm3ncfzljXZFXY';
+
+    async function fetchNowPlaying() {
+      const res = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
+        headers: {
+          Authorization: 'Bearer ' + accessToken
+        }
+      });
+
+      if (!res.ok || res.status === 204) {
+        document.getElementById('track-name').innerText = 'Nothing playing';
+        document.getElementById('artist-name').innerText = '';
+        document.getElementById('album-art').src = '';
+        document.getElementById('progress-bar').style.width = '0%';
+        return;
+      }
+
+      const data = await res.json();
+      const track = data.item;
+      const progress = data.progress_ms;
+      const duration = track.duration_ms;
+
+      document.getElementById('track-name').innerText = track.name;
+      document.getElementById('artist-name').innerText = track.artists.map(a => a.name).join(', ');
+      document.getElementById('album-art').src = track.album.images[0].url;
+
+      const percentage = (progress / duration) * 100;
+      document.getElementById('progress-bar').style.width = percentage + '%';
+    }
+
+    fetchNowPlaying();
+    setInterval(fetchNowPlaying, 5000);
+  </script>
+</body>
+</html>
