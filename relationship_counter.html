@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Time Together</title>
-  <link rel="stylesheet" href="relationship_counter.css" />
-</head>
-<body>
-  <div class="heart">💖</div>
-  <h1>Our Time Together</h1>
-  <div class="info" id="output"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Our Time Together</title>
+        <link rel="stylesheet" href="relationship_counter.css" />
+    </head>
+    <body>
+        <div class="heart">💖</div>
+        <h1>Our Time Together</h1>
+        <div class="info" id="output"></div>
 
-  <script>
-    function calculateTimeTogether(startDate) {
-      const now = new Date();
-      const start = new Date(startDate);
+        <script>
+            function calculateTimeTogether(startDate) {
+                const now = new Date();
+                const start = new Date(startDate);
 
-      const totalMs = now - start;
-      const totalDays = Math.floor(totalMs / (1000 * 60 * 60 * 24));
+                const totalMs = now - start;
+                const totalDays = Math.floor(totalMs / (1000 * 60 * 60 * 24));
 
-      let months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
-      let dayDiff = now.getDate() - start.getDate();
+                let months =
+                    (now.getFullYear() - start.getFullYear()) * 12 +
+                    (now.getMonth() - start.getMonth());
+                let dayDiff = now.getDate() - start.getDate();
 
-      if (dayDiff < 0) {
-        months -= 1;
-        const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
-        dayDiff += prevMonth.getDate();
-      }
+                if (dayDiff < 0) {
+                    months -= 1;
+                    const prevMonth = new Date(
+                        now.getFullYear(),
+                        now.getMonth(),
+                        0
+                    );
+                    dayDiff += prevMonth.getDate();
+                }
 
-      return {
-        totalDays,
-        months,
-        days: dayDiff
-      };
-    }
+                return {
+                    totalDays,
+                    months,
+                    days: dayDiff,
+                };
+            }
 
-    const startDate = '2025-06-08';
-    const result = calculateTimeTogether(startDate);
-    const output = document.getElementById('output');
-    output.innerHTML = `
+            const startDate = "2025-06-08";
+            const result = calculateTimeTogether(startDate);
+            const output = document.getElementById("output");
+            output.innerHTML = `
       You've been together since <strong>May 24, 2025</strong> 💑<br><br>
       That’s <strong>${result.months} months and ${result.days} days</strong><br>
       Or <strong>${result.totalDays} days</strong> total 💕
     `;
-  </script>
-</body>
+        </script>
+    </body>
 </html>
