@@ -8,13 +8,13 @@
 
 :root {
     color-scheme: dark;
-    --base: #1e1e2e;
-    --mantle: #181825;
-    --surface0: #313244;
-    --surface1: #45475a;
-    --text: #cdd6f4;
-    --subtext: #a6adc8;
-    --accent: #89b4fa;
+    --base: #191724; /* Base background */
+    --mantle: #1f1d2e; /* Slightly darker background */
+    --surface0: #26233a; /* Panels */
+    --surface1: #2a273f; /* Hover / borders */
+    --text: #e0def4; /* Main text */
+    --subtext: #908caa; /* Secondary text */
+    --accent: #eb6f92; /* Accent pink */
 }
 
 html {
@@ -22,7 +22,7 @@ html {
     align-items: center;
     justify-content: center;
     height: 100svh;
-    background-color: #1e1e2e;
+    background-color: var(--base);
     background-image: url("../bgs/topography.svg");
     overflow-x: clip;
 }
@@ -33,7 +33,7 @@ html.loaded {
 
 body {
     display: flex;
-    color: rgb(205, 214, 244);
+    color: var(--text);
     font-family: SpaceMono Nerd Font, monospace;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@ body {
 }
 
 #greeting {
-    color: #89b4fa;
+    color: var(--accent);
     font-size: 2.5em;
     font-weight: 900;
     grid-column: 1/-1;
@@ -87,7 +87,7 @@ body {
 #date {
     font-size: 1.3em;
     font-weight: 600;
-    color: #89b4fa;
+    color: var(--accent);
     display: grid;
     grid-column: 1/-1;
     text-align: center;
@@ -95,7 +95,7 @@ body {
 }
 
 .header {
-    color: #89b4fa;
+    color: var(--accent);
     font-size: 1.6em;
     font-weight: 600;
 }
@@ -113,14 +113,14 @@ ul {
 }
 
 a {
-    color: #cdd6f4;
+    color: var(--text);
     font-size: 1.2em;
     text-decoration: none;
     text-align: center;
 }
 
 a:hover {
-    color: rgb(127, 132, 156);
+    color: var(--subtext);
     font-style: italic;
     text-align: center;
 }
@@ -166,7 +166,7 @@ a:hover {
 }
 
 .search-bar button:hover {
-    background-color: #74c7ec;
+    background-color: #f6c177; /* Rosé Pine gold hover */
 }
 
 .center {

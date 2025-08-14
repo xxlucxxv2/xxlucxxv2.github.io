@@ -7,13 +7,13 @@
 }
 
 :root {
-    --base: #1e1e2e;
-    --mantle: #181825;
-    --surface0: #313244;
-    --surface1: #45475a;
-    --text: #cdd6f4;
-    --subtext: #a6adc8;
-    --accent: #89b4fa;
+    --base: #191724; /* base background */
+    --mantle: #1f1d2e; /* slightly lighter background */
+    --surface0: #26233a; /* card background */
+    --surface1: #2a273f; /* slightly lighter surface */
+    --text: #e0def4; /* main text */
+    --subtext: #6e6a86; /* muted text */
+    --accent: #eb6f92; /* rosy pink accent */
 }
 
 * {
@@ -101,7 +101,7 @@ h1 {
 }
 
 .search-bar button:hover {
-    background-color: #74c7ec;
+    background-color: #f6c177; /* gold hover */
 }
 
 .link-list {
@@ -127,7 +127,7 @@ h1 {
 }
 
 .link-list li a:hover {
-    color: #cdd6f4;
+    color: var(--text);
     font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none;
@@ -169,7 +169,7 @@ h1 {
 }
 
 .collapsible-btn:hover {
-    color: #cdd6f4;
+    color: var(--text);
 }
 
 .collapsible-content {
@@ -179,18 +179,18 @@ h1 {
     background-color: var(--surface0);
     border-radius: 0.5rem;
     margin-top: 1rem;
-    transition: max-height 0.3s ease, padding 0.3s ease; /* Add padding transition */
+    transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .collapsible-content.open {
-    max-height: 1000px; /* Set a high value to accommodate content height */
-    padding: 1rem; /* Consistent padding when open */
+    max-height: 1000px;
+    padding: 1rem;
 }
 
 .collapsible-content ul {
     list-style: none;
     padding: 0;
-    margin: 0; /* Remove default margins */
+    margin: 0;
 }
 
 .collapsible-content li {
@@ -213,33 +213,30 @@ h1 {
 }
 
 .collapsible-content li a {
-    color: var(--accent); /* Default link color */
+    color: var(--accent);
     font-size: 1.1rem;
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    transition: color 0.3s ease;
 }
 
 .collapsible-content li a:hover {
-    color: #cdd6f4; /* Hover color */
+    color: var(--text);
 }
 
-/* Global link styles */
 a {
-    color: var(--accent); /* Default link color */
+    color: var(--accent);
     text-decoration: none;
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    transition: color 0.3s ease;
 }
 
-/* Hover effect for all links */
 a:hover {
-    color: #cdd6f4; /* Hover color */
+    color: var(--text);
 }
 
-/* Specifically for links within the collapsible content */
 .collapsible-content a {
-    color: var(--accent); /* Default color for links in collapsible content */
+    color: var(--accent);
 }
 
 .collapsible-content a:hover {
-    color: #cdd6f4; /* Hover color for links in collapsible content */
+    color: var(--text);
 }
